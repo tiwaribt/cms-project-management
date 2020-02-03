@@ -75,11 +75,18 @@
         <main class="py-4">
             @auth
                 <div class="container">
+                    @if ($message = Session::get('success'))
+                        <div class="alert alert-success alert-block">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>{{ $message }}</strong>
+                        </div>
+                        <br>
+                    @endif
                     <div class="row">
                         <div class="col-md-4">
                             <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action active">Post</a>
-                                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                <a href="#" class="list-group-item list-group-item-action">Categories</a>
                                 <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
                                 <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
                                 <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at eros</a>
