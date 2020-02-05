@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//register all the routes for categories controller
+Route::resource('categories','CategoriesController');
